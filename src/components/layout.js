@@ -8,6 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import gsap from "gsap";
 
 import Header from "./header"
 import "./layout.css"
@@ -25,7 +26,14 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <p>hello world!</p>
+      <p>hello world!</p> 
+
+
+      <div id="preloader">
+        <div className="loading_text">
+          Loading
+        </div>
+      </div>
     </div>
   )
 }
