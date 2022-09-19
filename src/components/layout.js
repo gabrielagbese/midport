@@ -9,6 +9,8 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import gsap from "gsap";
+import 'pace-js'
+import 'pace-js/themes/yellow/pace-theme-minimal.css'
 
 import Header from "./header"
 import "./layout.css"
@@ -25,15 +27,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div>
-      <p>hello world!</p> 
-
-
-      <div id="preloader">
-        <div className="loading_text">
-          Loading
-        </div>
+    <div className="container">
+      <div className="nav"></div>
+      <div className="content">
+        <div className="box_wrapper"></div>
       </div>
+
+      
     </div>
   )
 }
