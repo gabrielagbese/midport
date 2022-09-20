@@ -12,6 +12,19 @@ body {
   overflow: hidden;
 }
 
+.external::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  opacity: 0.08;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  pointer-events: none;
+  background: url(../images/noisegif.gif);
+}
+
 .external {
   width: 100%;
   height: 100%;
@@ -53,19 +66,6 @@ body {
   font-weight: 700;
 }
 
-.content::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  opacity: 0.08;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  pointer-events: none;
-  background: url(../images/noisegif.gif);
-}
-
 .content {
   width: 100%;
   height: 95vh;
@@ -89,16 +89,16 @@ body {
 .grad_left {
   width: 9vw;
   height: 83vh;
-  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(70%), to(rgba(0, 0, 0, 0.35)));
-  background: linear-gradient(to right, black, 70%, rgba(0, 0, 0, 0.35));
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(85%), to(rgba(5, 5, 5, 0.2)));
+  background: linear-gradient(to right, black, 85%, rgba(5, 5, 5, 0.2));
   z-index: 2;
 }
 
 .grad_right {
   width: 9vw;
   height: 83vh;
-  background: -webkit-gradient(linear, right top, left top, from(black), color-stop(70%), to(rgba(0, 0, 0, 0.35)));
-  background: linear-gradient(to left, black, 70%, rgba(0, 0, 0, 0.35));
+  background: -webkit-gradient(linear, right top, left top, from(black), color-stop(85%), to(rgba(5, 5, 5, 0.2)));
+  background: linear-gradient(to left, black, 85%, rgba(5, 5, 5, 0.2));
   z-index: 2;
 }
 
@@ -113,7 +113,7 @@ body {
   position: absolute;
   width: 100%;
   height: 80vh;
-  border: thin solid pink;
+  border: thin solid lightblue;
   margin-left: 60%;
   background-color: #200080;
 }
@@ -123,7 +123,7 @@ body {
   width: 100%;
   height: 80vh;
   margin-left: -40%;
-  border: thin solid pink;
-  background-color: #800400;
+  border: thin solid lightblue;
+  background-color: #200080;
 }
 /*# sourceMappingURL=layout.css.map */
