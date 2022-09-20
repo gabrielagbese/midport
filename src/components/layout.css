@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -11,13 +12,24 @@ body {
   overflow: hidden;
 }
 
+.external {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .text {
   color: white;
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 99vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,17 +37,37 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: thin solid red;
 }
 
 .nav {
-  width: 100vw;
+  width: 100%;
   height: 15vh;
-  border: thin solid green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-weight: 700;
+}
+
+.content::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  opacity: 0.08;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  pointer-events: none;
+  background: url(../images/noisegif.gif);
 }
 
 .content {
-  width: 100vw;
+  width: 100%;
   height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,12 +78,52 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: thin solid blue;
 }
 
 .box_wrapper {
   width: 85vw;
   height: 80vh;
-  border: thin solid yellow;
+  position: relative;
+}
+
+.grad_left {
+  width: 9vw;
+  height: 83vh;
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(70%), to(rgba(0, 0, 0, 0.35)));
+  background: linear-gradient(to right, black, 70%, rgba(0, 0, 0, 0.35));
+  z-index: 2;
+}
+
+.grad_right {
+  width: 9vw;
+  height: 83vh;
+  background: -webkit-gradient(linear, right top, left top, from(black), color-stop(70%), to(rgba(0, 0, 0, 0.35)));
+  background: linear-gradient(to left, black, 70%, rgba(0, 0, 0, 0.35));
+  z-index: 2;
+}
+
+.inner {
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  background-color: green;
+}
+
+.inner2 {
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  border: thin solid pink;
+  margin-left: 60%;
+  background-color: #200080;
+}
+
+.inner3 {
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  margin-left: -40%;
+  border: thin solid pink;
+  background-color: #800400;
 }
 /*# sourceMappingURL=layout.css.map */
