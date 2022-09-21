@@ -132,6 +132,7 @@ body {
 
 .top-left {
   margin-left: 60%;
+  margin-top: 30%;
   background: -webkit-gradient(linear, left top, right top, from(rgba(13, 107, 106, 0.3)), to(rgba(0, 117, 63, 0.3)));
   background: linear-gradient(to right, rgba(13, 107, 106, 0.3), rgba(0, 117, 63, 0.3));
 }
