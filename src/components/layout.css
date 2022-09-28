@@ -16,7 +16,7 @@ body {
   content: "";
   height: 100%;
   width: 100%;
-  opacity: 0.1;
+  opacity: 0.06;
   position: fixed;
   top: 0;
   left: 0;
@@ -41,19 +41,179 @@ body {
 
 .text {
   color: white;
+  padding: 3%;
+  font-size: large;
 }
 
 .container {
+  margin-top: 2%;
   width: 90%;
   height: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border: thin solid red;
-  border-radius: 50px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #101010;
+  border-radius: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 0px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: thick solid white;
+  }
+}
+
+@media (min-width: 720px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border: thick solid white;
+  }
+}
+
+.hero {
+  border: thick solid orange;
+  border-radius: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (min-width: 0px) {
+  .hero {
+    height: 50%;
+    width: 95%;
+    margin-top: 1vh;
+  }
+}
+
+@media (min-width: 720px) {
+  .hero {
+    height: 96%;
+    width: 40%;
+    margin-top: 0;
+  }
+}
+
+.about {
+  background-color: green;
+  border-radius: 40px;
+}
+
+@media (min-width: 0px) {
+  .about {
+    height: 25%;
+    width: 95%;
+    margin-top: 1vh;
+  }
+}
+
+@media (min-width: 720px) {
+  .about {
+    height: 96%;
+    width: 30%;
+    margin-top: 0;
+  }
+}
+
+.other {
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 0px) {
+  .other {
+    height: 24%;
+    width: 95%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 720px) {
+  .other {
+    height: 96%;
+    width: 25%;
+    margin-top: 0;
+    margin-right: 2%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.projects {
+  border-radius: 40px;
+  background-color: purple;
+}
+
+@media (min-width: 0px) {
+  .projects {
+    height: 100%;
+    width: 50%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 720px) {
+  .projects {
+    height: 50%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.contact {
+  border-radius: 40px;
+  background-color: red;
+}
+
+@media (min-width: 0px) {
+  .contact {
+    height: 100%;
+    width: 50%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 720px) {
+  .contact {
+    height: 50%;
+    width: 100%;
+    margin-top: 2vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=layout.css.map */

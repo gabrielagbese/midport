@@ -19,7 +19,7 @@ body{
     content: "";
     height: 100%;
     width: 100%;
-    opacity: 0.1;
+    opacity: 0.06;
     position: fixed;
     top: 0;
     left: 0; 
@@ -39,13 +39,123 @@ body{
 
 .text{
     color: white;
+    padding: 3%;
+    font-size: large;
 }
 
 .container{
+    margin-top: 2%;
     width: 90%;
     height: 95%;
     display: flex;
-    flex-direction: column;
-    border: thin solid red;
-    border-radius: 50px;
+    justify-content: space-around;
+    background-color: rgb(16, 16, 16);
+    border-radius: 40px;
+    align-items: center;
+
+    @include xs{
+        flex-direction: column;
+        border: thick solid white;
+    }
+    @include md{
+        flex-direction: row;
+        border: thick solid white;
+    }
 }
+
+.hero{
+    border: thick solid orange;
+    border-radius: 40px;
+    box-sizing: border-box;
+
+    @include xs{
+        height: 50%;
+        width: 95%;
+        margin-top: 1vh;
+    }
+    @include md{
+        height: 96%;
+        width: 40%;
+        margin-top: 0;
+        
+    }
+}
+
+.about{
+    background-color: green;
+    border-radius: 40px;
+
+    @include xs{
+        height: 25%;
+        width: 95%;
+        margin-top: 1vh;
+    }
+    @include md{
+        height: 96%;
+        width: 30%;
+        margin-top: 0;
+        
+        
+    }
+}
+
+.other{
+    //border: medium solid blue;
+    border-radius: 40px;
+    display: flex;
+    @include xs{
+        height: 24%;
+        width: 95%;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        flex-direction: row;
+
+    }
+    @include md{
+        height: 96%;
+        width: 25%;
+        margin-top: 0;
+        margin-right: 2%;
+        flex-direction: column;
+    }
+}
+
+.projects{
+    border-radius: 40px;
+    background-color: purple;
+    @include xs{
+        height: 100%;
+        width: 50%;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        flex-direction: row;
+
+    }
+    @include md{
+        height: 50%;
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.contact{
+    border-radius: 40px;
+    background-color: red;
+    @include xs{
+        height: 100%;
+        width: 50%;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        flex-direction: row;
+
+    }
+    @include md{
+        height: 50%;
+        width: 100%;
+        margin-top: 2vh;
+        flex-direction: column;
+    }
+}
+
+
+
