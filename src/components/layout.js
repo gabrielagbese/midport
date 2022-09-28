@@ -29,29 +29,24 @@ const Layout = ({ children }) => {
   return (
     <div className="external">
       <div className="container">
-        <div className="nav">
-          <h2 className="text">ABOUT</h2>
-          <h2 className="text">WORK</h2>
-          <h2 className="text">CONTA</h2>
-        </div>
-
-        <div className="content">
-          <div className="content_with_bottom">
-            <div className="grad_left"></div>
-            <div className="box_wrapper">
-              <div className="four box">test</div>
-              <div className="three box"></div>
-              <div className="top-left box text">tl</div>
-              <div className="top-right box">tr</div>
-            </div>
-            <div className="grad_right"></div>
-          </div>
-          <div className="bottom">a</div>
-        </div>
+        
       </div>
     </div>
   )
 }
+
+// var topRight = gsap.timeline();
+// var topLeft = gsap.timeline();
+
+
+// function heroAbout(){
+//   topRight.to(".top-right",{ x: 45+'vw',});
+//   console.log("rightMoved")
+//   topLeft.to(".top-left", { y: -35+'vh',});
+//   topLeft.to(".top-left", { x: -50+'vw',});
+  
+  
+// }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

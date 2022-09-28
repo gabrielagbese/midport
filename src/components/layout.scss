@@ -19,7 +19,7 @@ body{
     content: "";
     height: 100%;
     width: 100%;
-    opacity: 0.05;
+    opacity: 0.1;
     position: fixed;
     top: 0;
     left: 0; 
@@ -29,10 +29,12 @@ body{
    }
 
 .external{
-    width: 100%;
-    height: 100%;
+    width: 99.8%;
+    height: 99vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    //border: thin solid blue;
 }
 
 .text{
@@ -40,99 +42,10 @@ body{
 }
 
 .container{
-    width: 100%;
-    height: 99vh;
-    display: flex;
-    flex-direction: column;
-    //border: thin solid red;
-}
-
-.nav{
-    width: 100%;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-weight: 700;
-    //border: thin solid green;
-}
-
-
-.content{
-    width: 100%;
-    height: 85vh;
-    //border: thin solid blue;
-}
-.content_with_bottom{
-    width: 100%;
+    width: 90%;
     height: 95%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border: thin solid blue;
-}
-
-.bottom{
-    width: 100%;
-    height: 7%;
-    background-color: black;
-    //background: linear-gradient(to left, black,85%, rgba(5, 5, 5, 0.2));
-    z-index: 3;
+    flex-direction: column;
     border: thin solid red;
-}
-
-.box_wrapper{
-    width: 85vw;
-    height: 100%;
-    position: relative;
-    //border: thin solid yellow;
-}
-
-.grad_left{
-    width: 9vw;
-    height: 110%;
-    background: linear-gradient(to right, black,85%, rgba(5, 5, 5, 0.2));
-    z-index: 2;
-    //border: thin solid pink;
-}
-
-.grad_right{
-    width: 9vw;
-    height: 110%;
-    background: linear-gradient(to left, black,85%, rgba(5, 5, 5, 0.2));
-    z-index: 2;
-    //border: thin solid pink;
-}
-
-.box{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-image: linear-gradient(to left, rgba(29, 239, 236, 0.2), rgba(0, 249, 133, 0.2));
-    border-width: 2px;
-    border-image-slice: 1;
-    border-style: solid;
-    box-sizing: border-box;
-}
-
-.top-left{
-    margin-left: 60%;
-    //vertical motion x = x/2 (half the value of horizontal)
-    margin-top: 30%;
-    background: linear-gradient(to right, rgba(13, 107, 106,0.30), rgba(0, 117, 63, 0.30));
-}
-
-.top-right{
-    background: linear-gradient(to right, rgba(13, 107, 106,0.35), rgba(0, 117, 63, 0.35));
-    margin-left: -40%;
-    
-}
-
-.three{
-    background: linear-gradient(to right, rgba(13, 107, 106,0.2), rgba(0, 117, 63, 0.2));
-}
-
-.four{
-    background: linear-gradient(to right, rgba(13, 107, 106,0.1), rgba(0, 117, 63, 0.1));
-
+    border-radius: 50px;
 }
