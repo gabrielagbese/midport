@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: "Squard1";
+  src: url("../font/SquareBlockRegular-AYGg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Squard2";
+  src: url("../font/SquareRegular-8qW0.ttf") format("truetype");
+}
+
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Squard1','Roboto';
   margin: 0;
   padding: 0;
 }
@@ -8,7 +18,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: #060606;
   overflow: hidden;
 }
 
@@ -16,7 +26,6 @@ body {
   content: "";
   height: 100%;
   width: 100%;
-  opacity: 0.06;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,12 +34,28 @@ body {
   background: url(../images/noisegif.gif);
 }
 
+@media (min-width: 0px) {
+  .external::after {
+    opacity: 0.06;
+  }
+}
+
+@media (min-width: 720px) {
+  .external::after {
+    opacity: 0.02;
+  }
+}
+
 .external {
   width: 99.8%;
   height: 99vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -40,12 +65,32 @@ body {
 }
 
 .text {
-  color: white;
+  color: #f5f5f5;
+  font-weight: bolder;
   padding: 3%;
-  font-size: large;
+}
+
+@media (min-width: 0px) {
+  .text {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 720px) {
+  .text {
+    font-size: 108px;
+  }
+}
+
+.min {
+  font-family: 'Roboto';
+  color: #f5f5f5;
+  font-weight: bold;
+  font-size: 32px;
 }
 
 .container {
+  position: absolute;
   margin-top: 2%;
   width: 90%;
   height: 95%;
@@ -54,8 +99,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: #101010;
-  border-radius: 40px;
+  border-radius: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -67,7 +111,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border: thick solid white;
   }
 }
 
@@ -77,15 +120,25 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    border: thick solid white;
   }
 }
 
 .hero {
-  border: thick solid orange;
-  border-radius: 40px;
+  border: thick solid #85826c;
+  border-radius: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #101010;
 }
 
 @media (min-width: 0px) {
@@ -100,13 +153,14 @@ body {
   .hero {
     height: 96%;
     width: 40%;
+    margin-left: 0.5%;
     margin-top: 0;
   }
 }
 
 .about {
-  background-color: green;
-  border-radius: 40px;
+  background-color: #0d5523;
+  border-radius: 30px;
 }
 
 @media (min-width: 0px) {
@@ -120,13 +174,13 @@ body {
 @media (min-width: 720px) {
   .about {
     height: 96%;
-    width: 30%;
+    width: 32%;
     margin-top: 0;
   }
 }
 
 .other {
-  border-radius: 40px;
+  border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,7 +204,11 @@ body {
     height: 96%;
     width: 25%;
     margin-top: 0;
-    margin-right: 2%;
+    margin-bottom: 0;
+    margin-right: 0.5%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -159,8 +217,8 @@ body {
 }
 
 .projects {
-  border-radius: 40px;
-  background-color: purple;
+  border-radius: 30px;
+  background-color: #0d4055;
 }
 
 @media (min-width: 0px) {
@@ -178,8 +236,10 @@ body {
 
 @media (min-width: 720px) {
   .projects {
-    height: 50%;
+    height: 49.5%;
     width: 100%;
+    margin-left: 0vw;
+    margin-right: 0vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -188,8 +248,8 @@ body {
 }
 
 .contact {
-  border-radius: 40px;
-  background-color: red;
+  border-radius: 30px;
+  background-color: #7b0e08;
 }
 
 @media (min-width: 0px) {
@@ -207,13 +267,81 @@ body {
 
 @media (min-width: 720px) {
   .contact {
-    height: 50%;
+    height: 49.5%;
     width: 100%;
-    margin-top: 2vh;
+    margin-left: 0vw;
+    margin-right: 0vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+.content {
+  position: absolute;
+  margin-top: 2%;
+  width: 90%;
+  height: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 0px) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 720px) {
+  .content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.internal {
+  border-radius: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+@media (min-width: 0px) {
+  .internal {
+    height: 50%;
+    width: 95%;
+    margin-top: 1vh;
+  }
+}
+
+@media (min-width: 720px) {
+  .internal {
+    height: 96%;
+    width: 98.5%;
+    margin-left: 0.5%;
+    margin-top: 0;
   }
 }
 /*# sourceMappingURL=layout.css.map */
