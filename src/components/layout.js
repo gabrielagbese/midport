@@ -49,6 +49,7 @@ const Layout = ({ children }) => {
       {/* content */}
       <div className="content">
         <div className="internal" onClick={() => {textgo()}}>
+        {/* setup react router */}
           {componento}
         </div>
       </div>

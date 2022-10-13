@@ -36,13 +36,13 @@ body {
 
 @media (min-width: 0px) {
   .external::after {
-    opacity: 0.06;
+    opacity: 0.0;
   }
 }
 
 @media (min-width: 720px) {
   .external::after {
-    opacity: 0.02;
+    opacity: 0.00;
   }
 }
 
@@ -78,7 +78,7 @@ body {
 
 @media (min-width: 720px) {
   .text {
-    font-size: 108px;
+    font-size: 150px;
   }
 }
 
@@ -92,7 +92,6 @@ body {
 .container {
   position: absolute;
   margin-top: 2%;
-  width: 90%;
   height: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,6 +106,7 @@ body {
 
 @media (min-width: 0px) {
   .container {
+    width: 95%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -116,6 +116,7 @@ body {
 
 @media (min-width: 720px) {
   .container {
+    width: 90%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -124,8 +125,7 @@ body {
 }
 
 .hero {
-  border: thick solid #85826c;
-  border-radius: 30px;
+  border-bottom: thick solid #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -138,7 +138,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #101010;
 }
 
 @media (min-width: 0px) {
@@ -159,7 +158,7 @@ body {
 }
 
 .about {
-  background-color: #0d5523;
+  background-color: #01303F;
   border-radius: 30px;
 }
 
@@ -180,7 +179,6 @@ body {
 }
 
 .other {
-  border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,6 +186,7 @@ body {
 
 @media (min-width: 0px) {
   .other {
+    border-radius: 25px;
     height: 24%;
     width: 95%;
     margin-top: 1vh;
@@ -201,6 +200,7 @@ body {
 
 @media (min-width: 720px) {
   .other {
+    border-radius: 30px;
     height: 96%;
     width: 25%;
     margin-top: 0;
@@ -217,12 +217,12 @@ body {
 }
 
 .projects {
-  border-radius: 30px;
-  background-color: #0d4055;
+  background-color: #02627a;
 }
 
 @media (min-width: 0px) {
   .projects {
+    border-radius: 25px;
     height: 100%;
     width: 50%;
     margin-left: 1vw;
@@ -236,6 +236,7 @@ body {
 
 @media (min-width: 720px) {
   .projects {
+    border-radius: 30px;
     height: 49.5%;
     width: 100%;
     margin-left: 0vw;
@@ -248,12 +249,12 @@ body {
 }
 
 .contact {
-  border-radius: 30px;
-  background-color: #7b0e08;
+  background-color: #0e142e;
 }
 
 @media (min-width: 0px) {
   .contact {
+    border-radius: 25px;
     height: 100%;
     width: 50%;
     margin-left: 1vw;
@@ -267,6 +268,7 @@ body {
 
 @media (min-width: 720px) {
   .contact {
+    border-radius: 30px;
     height: 49.5%;
     width: 100%;
     margin-left: 0vw;
@@ -340,7 +342,8 @@ body {
   .internal {
     height: 96%;
     width: 98.5%;
-    margin-left: 0.5%;
+    margin-left: -90px;
+    margin-bottom: -110px;
     margin-top: 0;
   }
 }

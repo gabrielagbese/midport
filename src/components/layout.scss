@@ -29,7 +29,7 @@ body{
     content: "";
     height: 100%;
     width: 100%;
-    //opacity: 0.03;
+    //opacity: 0.0;
     position: fixed;
     top: 0;
     left: 0; 
@@ -38,11 +38,11 @@ body{
     background: url(../images/noisegif.gif) ;
 
     @include xs{
-        opacity: 0.06;
+        opacity: 0.0;
 
     }
     @include md{
-        opacity: 0.02;
+        opacity: 0.00;
     }
    }
 
@@ -67,7 +67,8 @@ body{
 
     }
     @include md{
-        font-size: 108px;
+        font-size: 150px;
+        //font-weight: 900;
     }
 }
 
@@ -81,7 +82,7 @@ body{
 .container{
     position: absolute;
     margin-top: 2%;
-    width: 90%;
+    //width: 90%;
     height: 95%;
     display: flex;
     justify-content: space-around;
@@ -90,23 +91,25 @@ body{
     align-items: center;
 
     @include xs{
+        width: 95%;
         flex-direction: column;
         //border: thick solid white;
     }
     @include md{
+        width: 90%;
         flex-direction: row;
         //border: thick solid white;
     }
 }
 
 .hero{
-    border: thick solid #85826c;
-    border-radius: 30px;
+    border-bottom: thick solid #fff;
+    //border-radius: 30px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(16, 16, 16);
+    //background-color: rgb(16, 16, 16);
 
     @include xs{
         height: 50%;
@@ -123,7 +126,7 @@ body{
 }
 
 .about{
-    background-color: #0d5523;
+    background-color: #01303F;
     border-radius: 30px;
 
     @include xs{
@@ -141,9 +144,10 @@ body{
 
 .other{
     //border: medium solid blue;
-    border-radius: 30px;
+    //border-radius: 30px;
     display: flex;
     @include xs{
+        border-radius: 25px;
         height: 24%;
         width: 95%;
         margin-top: 1vh;
@@ -152,6 +156,7 @@ body{
 
     }
     @include md{
+        border-radius: 30px;
         height: 96%;
         width: 25%;
         margin-top: 0;
@@ -163,9 +168,10 @@ body{
 }
 
 .projects{
-    border-radius: 30px;
-    background-color: #0d4055;
+    //border-radius: 30px;
+    background-color: #02627a;
     @include xs{
+        border-radius: 25px;
         height: 100%;
         width: 50%;
         margin-left: 1vw;
@@ -174,6 +180,7 @@ body{
 
     }
     @include md{
+        border-radius: 30px;
         height: 49.5%;
         width: 100%;
         margin-left: 0vw;
@@ -184,9 +191,10 @@ body{
 }
 
 .contact{
-    border-radius: 30px;
-    background-color: #7b0e08;
+    //border-radius: 30px;
+    background-color: #0e142e;
     @include xs{
+        border-radius: 25px;
         height: 100%;
         width: 50%;
         margin-left: 1vw;
@@ -195,6 +203,7 @@ body{
 
     }
     @include md{
+        border-radius: 30px;
         height: 49.5%;
         width: 100%;
         margin-left: 0vw;
@@ -243,7 +252,8 @@ body{
     @include md{
         height: 96%;
         width: 98.5%;
-        margin-left: 0.5%;
+        margin-left: -90px;
+        margin-bottom: -110px;
         margin-top: 0;
         
     }
