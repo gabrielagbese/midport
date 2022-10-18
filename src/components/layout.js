@@ -133,47 +133,77 @@ var contentDisappear = gsap.timeline();
 
 
 function heroEx(){
-  //contentDisappear.to(".text", {opacity: 0, duration: 1})
-  hero1.to(".hero", { width: 40+"%",})
-  hero2.to(".about", { width: 32+"%",})
-  hero3.to(".other", { width: 25+"%",})
-  console.log("completed")
-  if (othersLaunced == true){
-    othersReset()
+  if(window.innerWidth >= 720){
+    //desktop screens
+    //contentDisappear.to(".text", {opacity: 0, duration: 1})
+    hero1.to(".hero", { width: 40+"%",})
+    hero2.to(".about", { width: 32+"%",})
+    hero3.to(".other", { width: 25+"%",})
+    console.log("completed")
+    if (othersLaunced == true){
+      othersReset()
+    }
+  }else{
+
   }
 }
 
 function aboutEx(){
-  about2.to(".other", { width: 25+"%",})
-  about1.to(".hero", { width: 10+"%",})
-  about3.to(".about", { width: 62+"%",})
-  if (othersLaunced == true){
-    othersReset()
+  if(window.innerWidth >= 720){
+    //desktop screens
+    about2.to(".other", { width: 25+"%",})
+    about1.to(".hero", { width: 10+"%",})
+    about3.to(".about", { width: 62+"%",})
+    if (othersLaunced == true){
+      othersReset()
+    }
+  }else{
+
   }
 }
 
 function otherEx(){
-  other1.to(".about", { width: 10+"%",})
-  other2.to(".hero", { width: 10+"%",})
-  other3.to(".other", { width: 77+"%",})
-  othersLaunced = true
+  if(window.innerWidth >= 720){
+    //desktop screens
+    other1.to(".about", { width: 10+"%",})
+    other2.to(".hero", { width: 10+"%",})
+    other3.to(".other", { width: 77+"%",})
+    othersLaunced = true
+  } else{
+
+}
 }
 
 function projectsEx(){
   otherEx()
-  projects.to(".projects", { height: 84.5+"%", })
-  contact.to(".contact", { height: 14+"%", borderRadius: 20+"px"})
+  if(window.innerWidth >= 720){
+    //desktop screens
+    projects.to(".projects", { height: 84.5+"%", })
+    contact.to(".contact", { height: 14+"%", borderRadius: 20+"px"})
+  } else{
+
+  }
 }
 
 function contactEx(){
   otherEx()
-  contact.to(".contact", { height: 84.5+"%",})
-  projects.to(".projects", { height: 14+"%", borderRadius: 20+"px",})
+  if(window.innerWidth >= 720){
+    //desktop screens
+    contact.to(".contact", { height: 84.5+"%",})
+    projects.to(".projects", { height: 14+"%", borderRadius: 20+"px",})
+  } else{
+
+  }
 }
 
 function othersReset(){
-  contact.to(".contact", {height: 39.5+"%", borderRadius: 30+"px",})
-  projects.to(".projects", {height: 59.5+"%", borderRadius: 30+"px",})
+  if(window.innerWidth >= 720){
+    //desktop screens
+    contact.to(".contact", {height: 39.5+"%", borderRadius: 30+"px",})
+    projects.to(".projects", {height: 59.5+"%", borderRadius: 30+"px",})
+  } else{
+    
+  }
 }
 
 
