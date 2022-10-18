@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import gsap from "gsap"
 import "pace-js"
+import eyeLogo from "../images/eyeLogo.png"
 import "pace-js/themes/yellow/pace-theme-minimal.css"
 
 import Header from "./header"
@@ -24,9 +25,9 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const pull_data = (data) => {
-    console.log(data)
-  }
+  // const Styled = {
+  //   paddingLeft: '-50%',
+  // }
 
   function aboutTest(){
     textgo()
@@ -54,7 +55,9 @@ const Layout = ({ children }) => {
     <div className="external">
       {/* shape */}
       <div className="container">
-        <div className="hero" onClick={() => {heroEx()}}></div>
+        <div className="hero" onClick={() => {heroEx()}}>
+          <img src={eyeLogo} width="150px" height="150px" className="eyelogo"></img>
+        </div>
         <div className="about" onClick={() => {aboutEx()}}></div>
         <div className="other">
           <div className="projects" onClick={() => {projectsEx()}}></div>

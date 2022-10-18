@@ -162,7 +162,7 @@ body {
 }
 
 .about {
-  background-color: #006161;
+  background-color: #b4ece27e;
   border-radius: 30px;
 }
 
@@ -221,7 +221,7 @@ body {
 }
 
 .projects {
-  background-color: #004548;
+  background-color: #7b7e81e6;
 }
 
 @media (min-width: 0px) {
@@ -253,7 +253,7 @@ body {
 }
 
 .contact {
-  background-color: #0031379c;
+  background-color: #aad5a57b;
 }
 
 @media (min-width: 0px) {
@@ -363,5 +363,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 90vh;
+}
+
+.eyelogo {
+  margin-left: -13.5px;
 }
 /*# sourceMappingURL=layout.css.map */
