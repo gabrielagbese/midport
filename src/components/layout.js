@@ -1,19 +1,21 @@
 import * as React from "react"
 import { useState } from "react"
-import PropTypes from "prop-types"
+import PropTypes, { bool } from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import gsap from "gsap"
 import "pace-js"
 import eyeLogo from "../images/eyeLogo.png"
 import "pace-js/themes/yellow/pace-theme-minimal.css"
 
-import Header from "./header"
+//page components
 import About from "./About"
 import Hero from "./Hero"
+import Projects from "./Projects"
+import Contact from "./Contact"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const [active, setActive]  = useState("FirstCard")
+  const [active, setActive]  = useState("heroCard")
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -35,9 +37,8 @@ const Layout = ({ children }) => {
       aboutEx()
     }, 1000);
     setTimeout(() => {
-      setActive("SecondCard")
+      setActive("aboutCard")
     }, 2000);
-    //gsap.delayedCall(2,about3.to(".text", {opacity: 100,}))
   }
 
   function heroTest(){
@@ -46,10 +47,30 @@ const Layout = ({ children }) => {
       heroEx()
     }, 1000);
     setTimeout(() => {
-      setActive("FirstCard")
+      setActive("heroCard")
     }, 2000);
-    //gsap.delayedCall(2,about3.to(".text", {opacity: 100,}))
   }
+
+  function projectsTest(){
+    textgo()
+    setTimeout(() => {
+      projectsEx()
+    }, 1000);
+    setTimeout(() => {
+      setActive("projectsCard")
+    }, 2000);
+  }
+
+  function contactTest(){
+    textgo()
+    setTimeout(() => {
+      contactEx()
+    }, 1000);
+    setTimeout(() => {
+      setActive("contactCard")
+    }, 2000);
+  }
+
 
   return (
     <div className="external">
@@ -68,9 +89,10 @@ const Layout = ({ children }) => {
       <div className="content">
         <div className="internal">
           {/* setup react router */}
-          {active === "FirstCard" && <Hero fn = {() => {aboutTest()}}/>}
-          {active === "SecondCard" && <About fn = {() => {heroTest()}}/>}
-          {active === "ThirdCard" && <Hero />}
+          {active === "heroCard" && <Hero fn = {() => {aboutTest()}}/>}
+          {active === "aboutCard" && <About fn = {() => {projectsTest()}}/>}
+          {active === "projectsCard" && <Projects fn = {() => {contactTest()}}/>}
+          {active === "contactCard" && <Contact fn = {() => {heroTest()}}/>}
           
         </div>
       </div>
@@ -98,12 +120,16 @@ var other2 = gsap.timeline();
 var other3 = gsap.timeline();
 var projects = gsap.timeline();
 var contact = gsap.timeline();
+var misc = gsap.timeline();
 var contentDisappear = gsap.timeline();
 
 //content modification animation
  function textgo(){
   contentDisappear.to(".text", {opacity: 0,})
  }
+
+ //toggle others launched
+ let othersLaunced = false
 
 
 function heroEx(){
@@ -112,39 +138,44 @@ function heroEx(){
   hero2.to(".about", { width: 32+"%",})
   hero3.to(".other", { width: 25+"%",})
   console.log("completed")
-  //othersReset()
+  if (othersLaunced == true){
+    othersReset()
+  }
 }
 
 function aboutEx(){
   about2.to(".other", { width: 25+"%",})
   about1.to(".hero", { width: 10+"%",})
   about3.to(".about", { width: 62+"%",})
-  //othersReset()
-  
+  if (othersLaunced == true){
+    othersReset()
+  }
 }
 
 function otherEx(){
-  other1.to(".about", { width: 12+"%",})
-  other2.to(".hero", { width: 15+"%",})
-  other3.to(".other", { width: 70+"%",})
+  other1.to(".about", { width: 10+"%",})
+  other2.to(".hero", { width: 10+"%",})
+  other3.to(".other", { width: 77+"%",})
+  othersLaunced = true
 }
 
 function projectsEx(){
   otherEx()
-  projects.to(".projects", { height: 88.5+"%", })
-  contact.to(".contact", { height: 10+"%", borderRadius: 20+"px"})
+  projects.to(".projects", { height: 84.5+"%", })
+  contact.to(".contact", { height: 14+"%", borderRadius: 20+"px"})
 }
 
 function contactEx(){
   otherEx()
-  contact.to(".contact", { height: 88.5+"%",})
-  projects.to(".projects", { height: 10+"%", borderRadius: 20+"px",})
+  contact.to(".contact", { height: 84.5+"%",})
+  projects.to(".projects", { height: 14+"%", borderRadius: 20+"px",})
 }
 
 function othersReset(){
-  projects.to(".projects", {height: 49.5+"%", width: 100+"%"})
-  contact.to(".contact", {height: 49.5+"%", width: 100+"%" })
+  contact.to(".contact", {height: 39.5+"%", borderRadius: 30+"px",})
+  projects.to(".projects", {height: 59.5+"%", borderRadius: 30+"px",})
 }
+
 
 
 Layout.propTypes = {

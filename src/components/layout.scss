@@ -131,7 +131,7 @@ body{
 }
 
 .about{
-    background-color: #b4ece27e;
+    background-color: #aad5a57b;
     border-radius: 30px;
 
     @include xs{
@@ -174,7 +174,7 @@ body{
 
 .projects{
     //border-radius: 30px;
-    background-color: #7b7e81e6;
+    background-color: #dadfe581;
     @include xs{
         border-radius: 25px;
         height: 100%;
@@ -197,7 +197,7 @@ body{
 
 .contact{
     //border-radius: 30px;
-    background-color: #aad5a57b;
+    background-color: #a8e1d67e;
     @include xs{
         border-radius: 25px;
         height: 100%;
@@ -269,6 +269,7 @@ body{
     justify-content: end;
     flex-direction: column;
     height: 90vh;
+    margin-bottom: -4vh;
 }
 
 .eyelogo{
