@@ -1,7 +1,13 @@
 import * as React from "react"
 import testImage from "../images/testface.png"
+import gsap from "gsap"
+import { useState } from "react"
 
-const Hero = () => {
+import About from "./About"
+
+const Hero = ({fn}) => {
+    const [active, setActive]  = useState("FirstCard")
+
 
     const Styled = {
         paddingLeft: 40,
@@ -9,7 +15,7 @@ const Hero = () => {
     return(
         <div className="xx">
             {/* <img src={testImage} width="400px" height="350px" style={Styled}></img> */}
-            <p className="text">Gabriel.</p>
+            <p className="text" onClick={fn}> Spotif</p>
         </div>
     )
 }

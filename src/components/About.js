@@ -1,9 +1,9 @@
 import * as React from "react"
 
-const About = () => {
+const About = ({fn}) => {
     return(
         <div>
-            <p className="text">About</p>
+            <p className="text"  onClick={fn}>About</p>
         </div>
     )
 }

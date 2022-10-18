@@ -1,11 +1,5 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
+import { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import gsap from "gsap"
@@ -17,9 +11,9 @@ import About from "./About"
 import Hero from "./Hero"
 import "./layout.css"
 
-const componento = <Hero />
-
 const Layout = ({ children }) => {
+  const [active, setActive]  = useState("FirstCard")
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -30,32 +24,58 @@ const Layout = ({ children }) => {
     }
   `)
 
-  
+  const pull_data = (data) => {
+    console.log(data)
+  }
+
+  function aboutTest(){
+    textgo()
+    setTimeout(() => {
+      aboutEx()
+    }, 1000);
+    setTimeout(() => {
+      setActive("SecondCard")
+    }, 2000);
+    //gsap.delayedCall(2,about3.to(".text", {opacity: 100,}))
+  }
+
+  function heroTest(){
+    textgo()
+    setTimeout(() => {
+      heroEx()
+    }, 1000);
+    setTimeout(() => {
+      setActive("FirstCard")
+    }, 2000);
+    //gsap.delayedCall(2,about3.to(".text", {opacity: 100,}))
+  }
 
   return (
     <div className="external">
       {/* shape */}
       <div className="container">
-        <div className="hero" onClick={() => {heroEx()}}>
-          
-        </div>
+        <div className="hero" onClick={() => {heroEx()}}></div>
         <div className="about" onClick={() => {aboutEx()}}></div>
         <div className="other">
           <div className="projects" onClick={() => {projectsEx()}}></div>
           <div className="contact" onClick={() => {contactEx()}}></div>
         </div>
       </div>
-
       {/* content */}
       <div className="content">
-        <div className="internal" onClick={() => {textgo()}}>
-        {/* setup react router */}
-          {componento}
+        <div className="internal">
+          {/* setup react router */}
+          {active === "FirstCard" && <Hero fn = {() => {aboutTest()}}/>}
+          {active === "SecondCard" && <About fn = {() => {heroTest()}}/>}
+          {active === "ThirdCard" && <Hero />}
+          
         </div>
       </div>
     </div>
   )
 }
+
+var testt = "successs"
 
 //content timelines
 // var heroParent = document.querySelectorAll('.hero')
@@ -79,29 +99,23 @@ var contentDisappear = gsap.timeline();
 
 //content modification animation
  function textgo(){
-  
   contentDisappear.to(".text", {opacity: 0,})
-  //componento  = <About />
-  contentDisappear.to(".text", {opacity: 100,})
  }
 
 
 function heroEx(){
-  contentDisappear.to(".text", {opacity: 0, duration: 1})
+  //contentDisappear.to(".text", {opacity: 0, duration: 1})
   hero1.to(".hero", { width: 40+"%",})
   hero2.to(".about", { width: 32+"%",})
   hero3.to(".other", { width: 25+"%",})
+  console.log("completed")
   //othersReset()
 }
 
 function aboutEx(){
-  textgo();
-  about2.to({}, {duration: 1});
-  about1.to({}, {duration: 1});
-  about3.to({}, {duration: 1});
   about2.to(".other", { width: 25+"%",})
-  about1.to(".hero", { width: 15+"%", backgroundColor: "#85826c",})
-  about3.to(".about", { width: 57+"%",})
+  about1.to(".hero", { width: 10+"%",})
+  about3.to(".about", { width: 62+"%",})
   //othersReset()
   
 }

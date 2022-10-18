@@ -130,7 +130,7 @@ body{
 }
 
 .about{
-    background-color: rgba(2,98,122,1);
+    background-color: #006161;
     border-radius: 30px;
 
     @include xs{
@@ -173,7 +173,7 @@ body{
 
 .projects{
     //border-radius: 30px;
-    background-color: rgba(2,98,122,0.66);
+    background-color: #004548;
     @include xs{
         border-radius: 25px;
         height: 100%;
@@ -196,7 +196,7 @@ body{
 
 .contact{
     //border-radius: 30px;
-    background-color: rgba(2,98,122,0.33);
+    background-color: #0031379c;
     @include xs{
         border-radius: 25px;
         height: 100%;
