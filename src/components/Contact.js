@@ -2,7 +2,7 @@ import * as React from "react"
 
 const Contact = ({fn}) => {
     return(
-        <div>
+        <div className="xx">
             <p className="text"  onClick={fn}>Contact</p>
         </div>
     )

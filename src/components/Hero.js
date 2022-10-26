@@ -10,11 +10,9 @@ const Hero = ({fn}) => {
 
 
     const Styled = {
-        paddingLeft: 40,
     }
     return(
         <div className="xx">
-            {/* <img src={testImage} width="400px" height="350px" style={Styled}></img> */}
             <p className="text" onClick={fn}> Gabriel</p>
         </div>
     )

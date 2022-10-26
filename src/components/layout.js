@@ -79,7 +79,9 @@ const Layout = ({ children }) => {
         <div className="hero" onClick={() => {heroEx()}}>
           <img src={eyeLogo} width="150px" height="150px" className="eyelogo"></img>
         </div>
-        <div className="about" onClick={() => {aboutEx()}}></div>
+        <div className="about" onClick={() => {aboutEx()}}>
+          <div className="coverblur"><p className="text">abt</p></div>
+        </div>
         <div className="other">
           <div className="projects" onClick={() => {projectsEx()}}></div>
           <div className="contact" onClick={() => {contactEx()}}></div>
@@ -144,7 +146,11 @@ function heroEx(){
       othersReset()
     }
   }else{
-
+    hero1.to(".hero", { height: 40+"%",})
+    hero2.to(".about", { height: 32+"%",})
+    hero3.to(".other", { height: 25+"%",})
+    console.log("completed")
+      othersReset()
   }
 }
 
@@ -154,11 +160,11 @@ function aboutEx(){
     about2.to(".other", { width: 25+"%",})
     about1.to(".hero", { width: 10+"%",})
     about3.to(".about", { width: 62+"%",})
-    if (othersLaunced == true){
-      othersReset()
-    }
+    othersReset()
   }else{
-
+    about2.to(".other", { height: 25+"%",})
+    about1.to(".hero", { height: 10+"%",})
+    about3.to(".about", { height: 62+"%",})
   }
 }
 
@@ -170,8 +176,10 @@ function otherEx(){
     other3.to(".other", { width: 77+"%",})
     othersLaunced = true
   } else{
-
-}
+    other1.to(".about", { height: 10+"%",})
+    other2.to(".hero", { height: 10+"%",})
+    other3.to(".other", { height: 77+"%",})
+  }
 }
 
 function projectsEx(){
@@ -179,9 +187,10 @@ function projectsEx(){
   if(window.innerWidth >= 720){
     //desktop screens
     projects.to(".projects", { height: 84.5+"%", })
-    contact.to(".contact", { height: 14+"%", borderRadius: 20+"px"})
+    contact.to(".contact", { height: 14+"%", borderRadius: 30+"px"})
   } else{
-
+    projects.to(".projects", { width: 84.5+"%", })
+    contact.to(".contact", { width: 14+"%", borderRadius: 30+"px"})
   }
 }
 
@@ -190,9 +199,10 @@ function contactEx(){
   if(window.innerWidth >= 720){
     //desktop screens
     contact.to(".contact", { height: 84.5+"%",})
-    projects.to(".projects", { height: 14+"%", borderRadius: 20+"px",})
+    projects.to(".projects", { height: 14+"%", borderRadius: 30+"px",})
   } else{
-
+    contact.to(".contact", { width: 84.5+"%",})
+    projects.to(".projects", { width: 14+"%", borderRadius: 30+"px",})
   }
 }
 
@@ -202,7 +212,8 @@ function othersReset(){
     contact.to(".contact", {height: 39.5+"%", borderRadius: 30+"px",})
     projects.to(".projects", {height: 59.5+"%", borderRadius: 30+"px",})
   } else{
-    
+    contact.to(".contact", {width: 39.5+"%", borderRadius: 30+"px",})
+    projects.to(".projects", {width: 59.5+"%", borderRadius: 30+"px",})
   }
 }
 
