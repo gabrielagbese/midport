@@ -25,7 +25,7 @@ body{
     overflow: hidden;
 }
 
-//noise layer
+noise layer
 .external::after{
     content: "";
     height: 100%;
@@ -39,11 +39,11 @@ body{
     background: url(../images/noisegif.gif) ;
 
     @include xs{
-        opacity: 0.02;
+        opacity: 0.52;
 
     }
     @include md{
-        opacity: 0.00;
+        opacity: 1;
     }
    }
 
@@ -58,7 +58,7 @@ body{
 }
 
 .text{
-    color: #f5f5f5;
+    color: #f5f5f5e1;
     font-weight: bolder;
     //font-size: 88px;
     
@@ -135,10 +135,10 @@ body{
 
 .about{
     //background: linear-gradient(-178deg,#E4E4CE47,70%, #E4E4CE47);
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-right: rgba(255, 255, 255, 0.2);
-    border-bottom: rgba(255, 255, 255, 0.2);
+    background: rgba(58, 189, 35, 0.15);
+    border: 3.5px solid rgba(58, 189, 35, 0.1);
+    border-right: rgba(248,249,209, 0.2);
+    border-top: rgba(248,249,209, 0.2);
     border-radius: 30px;
 
     @include xs{
@@ -181,8 +181,10 @@ body{
 
 .projects{
     //border-radius: 30px;
-    background: linear-gradient(-178deg,#23959d47,70%, #23959d47);
-    border: 2px solid #23959d67;
+    background: rgba(35,149,157,0.1);
+    border: 3.5px solid rgba(35,149,157,0.1);
+    border-right: rgba(35,149,157,0.2);
+    border-top: rgba(35,149,157,0.2);
     box-sizing: border-box;
     @include xs{
         border-radius: 25px;
@@ -206,8 +208,10 @@ body{
 
 .contact{
     //border-radius: 30px;
-    background: linear-gradient(-178deg,#EA290647,70%, #EA290647);
-    border: 2px solid #EA290667;
+    background: rgba(234,41,6,0.1);
+    border: 3.5px solid rgba(234,41,6,0.1);
+    border-right: rgba(234,41,6,0.2);
+    border-top: rgba(234,41,6,0.2);
     box-sizing: border-box;
     @include xs{
         border-radius: 25px;
@@ -309,3 +313,34 @@ body{
     //background-color: rgba(216, 194, 194, 0.126);
     //backdrop-filter: blur(25px);
 }
+
+.layerblur{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(132, 132, 120, 0.15);
+    border: 3.5px solid rgba(132, 132, 120, 0.2);
+    border-right: rgba(234, 235, 213, 0.2);
+    border-top: rgba(234, 235, 213, 0.2);
+    box-shadow: -20px 25px 35px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(95px);
+}
+
+.testlayer{
+    margin: 10px;
+    width: 105%;
+    height: 105%;
+    border-radius: 20px;
+
+}
+
+.testlayer2{
+    margin: 25px;
+    width: 105%;
+    height: 30%;
+    border-radius: 20px;
+    background-color: rgba(0, 128, 0, 0.17);
+
+}
+
+
+

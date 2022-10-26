@@ -80,11 +80,20 @@ const Layout = ({ children }) => {
           <img src={eyeLogo} width="150px" height="150px" className="eyelogo"></img>
         </div>
         <div className="about" onClick={() => {aboutEx()}}>
-          <div className="coverblur"><p className="text">abt</p></div>
+          <div className="coverblur"><p className="text">
+            <div className="layerblur testlayer">
+              <p className="text">a</p>
+              <div className="layerblur testlayer2">g</div>
+            </div>
+          </p>
+          </div>
         </div>
         <div className="other">
-          <div className="projects" onClick={() => {projectsEx()}}></div>
-          <div className="contact" onClick={() => {contactEx()}}></div>
+          <div className="projects" onClick={() => {projectsEx()}}>
+            <div className="blueblur"></div>
+          </div>
+          <div className="contact" onClick={() => {contactEx()}}>\
+          </div>
         </div>
       </div>
       {/* content */}
